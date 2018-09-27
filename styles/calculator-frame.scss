@@ -1,0 +1,49 @@
+@mixin button-container {
+  height: 100%;
+  width: 50%;
+}
+.calculator {
+  &-frame {
+    width: 800px;
+    height: 400px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 50px;
+    background-color: lighten (#000000, 10%);
+    border: 1px solid gray;
+  }
+
+  &-commands {
+    width: 100%;
+    margin: auto;
+    display: flex;
+  }
+
+  &-operations {
+    @include button-container;
+    justify-content: center;
+  }
+
+  &-numbers {
+    @include button-container;
+
+  }
+}
+
+#input {
+  width: 80%;
+  height: 32px;
+  border-radius: 2px;
+  outline: 0;
+  margin-right: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start {
+  justify-content: center;
+}
