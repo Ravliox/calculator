@@ -53,13 +53,13 @@ table {
 }
 
 .calculator-frame {
-  width: 800px;
-  height: 400px;
-  margin: auto;
-  margin-top: 20px;
-  padding: 50px;
   background-color: lighten #000000, 10%;
   border: 1px solid gray;
+  padding: 50px;
+  margin: auto;
+  width: 800px;
+  height: 400px;
+  margin-top: 20px;
 }
 .calculator-commands {
   width: 100%;
@@ -74,6 +74,23 @@ table {
 .calculator-numbers {
   height: 100%;
   width: 50%;
+}
+.calculator-history {
+  background-color: lighten #000000, 10%;
+  border: 1px solid gray;
+  padding: 50px;
+  margin: auto;
+  width: 800px;
+  min-height: 100px;
+}
+.calculator-history h1 {
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.calculator-history p {
+  font-size: 16px;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #input {
@@ -90,11 +107,7 @@ table {
   align-items: center;
 }
 
-.start {
-  justify-content: center;
-}
-
-.command {
+.instantOperation, .operation, .value {
   width: 60px;
   height: 60px;
   margin-right: 45px;
@@ -105,18 +118,14 @@ table {
   background-color: #b3b3b3;
 }
 
-.command:hover {
+.value:hover, .operation:hover, .instantOperation:hover {
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.command:active {
+.value:active, .operation:active, .instantOperation:active {
   background-color: white;
-}
-
-.command:last-child {
-  margin-right: 0;
 }
 
 #CE {

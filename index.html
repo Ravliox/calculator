@@ -2,61 +2,67 @@
   <head>
     <title>Calculator</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src = "./scripts/script.js"></script>
   </head>
   <body>
     <div class = "calculator-frame">
       <div class = "row">
-        <input type = "text" id="input" readonly/>
-        <button class = "command" id="CE">CE</button>
+        <input type = "text" id="input" value="0" readonly />
+        <button class = "instantOperation" id="CE">CE</button>
       </div>
       <div class = "calculator-commands">
         <div class = "calculator-numbers">
           <div class = "row">
-            <button class = "command" #id = "1">1</button>
-            <button class = "command" #id = "2">2</button>
-            <button class = "command" #id = "3">3</button>
+            <button class = "value">1</button>
+            <button class = "value">2</button>
+            <button class = "value">3</button>
           </div>
           <div class = "row">
-            <button class = "command" #id = "4">4</button>
-            <button class = "command" #id = "5">5</button>
-            <button class = "command" #id = "6">6</button>
+            <button class = "value">4</button>
+            <button class = "value">5</button>
+            <button class = "value">6</button>
           </div>
           <div class = "row">
-            <button class = "command" #id = "7">7</button>
-            <button class = "command" #id = "8">8</button>
-            <button class = "command" #id = "9">9</button>
+            <button class = "value">7</button>
+            <button class = "value">8</button>
+            <button class = "value">9</button>
           </div>
           <div class = "row">
-            <button class = "command" #id = "0">0</button>
-            <button class = "command" #id = "=">=</button>
-            <button class = "command" #id = ".">.</button>
+            <button class = "value">0</button>
+            <button id="compute" class = "instantOperation">=</button>
+            <button class = "value">.</button>
           </div>
         </div>
         <div class = "calculator-operations">
           <div class = "row">
-            <button class = "command" id="+">+</button>
-            <button class = "command" id="/">/</button>
-            <button class = "command" id="(">(</button>
+            <button class = "operation">+</button>
+            <button class = "operation">/</button>
+            <button class = "operation">(</button>
           </div>
           <div class = "row">
-            <button class = "command" id="-">-</button>
-            <button class = "command" id="*">*</button>
-            <button class = "command" id=")">)</button>
+            <button class = "operation">-</button>
+            <button class = "operation">*</button>
+            <button class = "operation">)</button>
           </div>
           <div class = "row">
-            <button class = "command" id="fact">Fact()</button>
-            <button class = "command" id="sqrt">Sqrt()</button>
-            <button class = "command" id = "modulus">Mod()</button>
+            <button class = "operation">^</button>
+            <button class = "operation">%</button> 
+            <button id = "sqrt" class = "instantOperation">Sqrt()</button>
 
           </div>
           <div class = "row">
-            <button class = "command" id="fib">Fib()</button>
-            <button class = "command" id="prime">Prm()</button>
-            <button class = "command" id="pow">Pow()</button> 
+            <button id = "fib" class = "instantOperation">Fib()</button>
+            <button id = "prime" class = "instantOperation">Prm()</button>
+            <button id = "fact" class = "instantOperation">Fact()</button>
           </div>
         </div>
       </div>
     </div>
+    <div id="history" class = "calculator-history">
+      <h1>History: </h1> 
+    </div>
+    <script src ="./scripts/operations.js"></script>
+    <script src = "./scripts/classes.js"></script>
+    <script src = "./scripts/eventListeners.js"></script>
+    <script src = "./scripts/index.js"></script>
   </body>
 </html>

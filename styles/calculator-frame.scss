@@ -2,15 +2,19 @@
   height: 100%;
   width: 50%;
 }
+@mixin frame {
+  background-color: lighten (#000000, 10%);
+  border: 1px solid gray;
+  padding: 50px;
+  margin: auto;
+  width: 800px;
+}
+
 .calculator {
   &-frame {
-    width: 800px;
+    @include frame;
     height: 400px;
-    margin: auto;
     margin-top: 20px;
-    padding: 50px;
-    background-color: lighten (#000000, 10%);
-    border: 1px solid gray;
   }
 
   &-commands {
@@ -26,7 +30,22 @@
 
   &-numbers {
     @include button-container;
+  }
 
+  &-history {
+    @include frame;
+    min-height: 100px;
+  }
+
+  &-history h1 {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  &-history p {
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
   }
 }
 
@@ -42,8 +61,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.start {
-  justify-content: center;
 }
